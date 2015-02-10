@@ -36,6 +36,9 @@ public class Game extends SurfaceView {
         initMap ();
         setView(getView ("menu"));
 
+
+        System.out.println ("Wwowo");
+
         invalidate ();
     }
 
