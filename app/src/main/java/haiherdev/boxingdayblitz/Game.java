@@ -38,6 +38,7 @@ public class Game extends SurfaceView {
 
 
         System.out.println ("Wwowo");
+        //Yay it works!
 
         invalidate ();
     }
