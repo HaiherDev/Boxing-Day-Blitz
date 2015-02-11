@@ -12,11 +12,11 @@ import java.util.ArrayList;
 /**
  * Created by David on 1/31/2015.
  */
-public abstract class GameView extends View {
+public abstract class AbstractView extends View {
 
     ArrayList<GameObject> list = new ArrayList<GameObject>();
 
-    public GameView(Context context) {
+    public AbstractView(Context context) {
         super(context);
         initList();
     }

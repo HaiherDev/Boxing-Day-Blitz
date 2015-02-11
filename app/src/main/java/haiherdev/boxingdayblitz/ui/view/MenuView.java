@@ -9,7 +9,7 @@ import haiherdev.boxingdayblitz.object.vector.Vector4z;
 /**
  * Created by David on 1/31/2015.
  */
-public class MenuView extends GameView {
+public class MenuView extends AbstractView {
 
     /**
      * constructor that reads in a context (MainActivity)

@@ -2,10 +2,8 @@ package haiherdev.boxingdayblitz;
 
 import android.app.Activity;
 import android.graphics.Point;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Display;
-import android.view.MotionEvent;
 import android.view.Window;
 import android.view.WindowManager;
 
