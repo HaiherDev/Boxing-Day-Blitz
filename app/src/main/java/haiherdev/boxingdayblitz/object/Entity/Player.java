@@ -15,6 +15,7 @@ import haiherdev.boxingdayblitz.object.vector.Vector4z;
  */
 public class Player extends GameObject {
 
+    //contains x, y, width, and height of the player
     private Vector4z v4z;
 
     //damaged state
@@ -25,6 +26,12 @@ public class Player extends GameObject {
 
     //the time it takes to get out of damage cycle
     private final int DAMAGE_TIME = 1000;
+    
+    //minumum height the player can travel up
+    private final int MIN_HEIGHT = 100
+    
+    //height where player will die if reached
+    private final int MAX_HEIGHT;
 
 
     /**
@@ -32,8 +39,9 @@ public class Player extends GameObject {
      * @param v4z: contains x, y, width and height of character
      *           x and y can be changed in the future
      */
-    public Player (Vector4z v4z) {
+    public Player (Vector4z v4z, int maxHeight) {
         this.v4z = v4z;
+        MAX_HEIGHT = maxHeight;
     }
 
     @Override
@@ -46,13 +54,23 @@ public class Player extends GameObject {
     @Override
     public void update() {
 
+        Vector2z temp = new Vector2z(0, 0);
+
         //count damage time when hit after being hit by an object
         if (isDamaged) {
-            if (damagedTime < DAMAGE_TIME)
+            if (damagedTime < DAMAGE_TIME) {
                 damagedTime ++;
+                v2z.setY(v2z.getY() + 1);
+            }
             else
                 isDamaged = false;
+        } else {
+            //if the player is not damaged, slowly move up at constant speed until maximum height is reached
+            if (getY() > MIN_HEIGHT)
+                v2z.setY(v2z.getY() - 1);
         }
+        
+        move (v2z);
     }
 
     @Override
