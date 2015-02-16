@@ -3,23 +3,23 @@ package haiherdev.boxingdayblitz.object.vector;
 /**
  * Created by David on 2/1/2015.
  */
-public class Vector4z {
+public class Vector4d {
 
-    private int x;
-    private int y;
-    private int width;
-    private int height;
+    private double x;
+    private double y;
+    private double width;
+    private double height;
 
-    public Vector4z (int x, int y, int width, int height) {
+    public Vector4d(double x, double y, double width, double height) {
         setX(x);
         setY(y);
         setWidth(width);
         setHeight(height);
     }
 
-    public void addVector2z (Vector2z v2z) {
-        this.setX(this.getX() + v2z.getX());
-        this.setY(this.getY() + v2z.getY());
+    public void addVector2d (Vector2d v2d) {
+        this.setX(this.getX() + v2d.getX());
+        this.setY(this.getY() + v2d.getY());
     }
 
 
@@ -29,7 +29,7 @@ public class Vector4z {
      * @param v2
      * @return
      */
-    public static boolean isColliding (Vector4z v1, Vector4z v2) {
+    public static boolean isColliding (Vector4d v1, Vector4d v2) {
         if (v1.getX() + v1.getWidth() < v2.getX() ||
             v1.getY() + v1.getWidth() < v2.getY() ||
             v2.getX() + v2.getWidth() < v1.getX() ||
@@ -41,35 +41,35 @@ public class Vector4z {
         }
     }
 
-    public void setX (int x) {
+    public void setX (double x) {
         this.x = x;
     }
 
-    public void setY (int y) {
+    public void setY (double y) {
         this.y = y;
     }
 
-    public void setWidth (int width) {
+    public void setWidth (double width) {
         this.width = width;
     }
 
-    public void setHeight (int height) {
+    public void setHeight (double height) {
         this.height = height;
     }
 
-    public int getX () {
+    public double getX () {
         return this.x;
     }
 
-    public int getY () {
+    public double getY () {
         return this.y;
     }
 
-    public int getWidth () {
+    public double getWidth () {
         return this.width;
     }
 
-    public int getHeight () {
+    public double getHeight () {
         return this.height;
     }
 }

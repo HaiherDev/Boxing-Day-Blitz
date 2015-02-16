@@ -3,29 +3,29 @@ package haiherdev.boxingdayblitz.object.vector;
 /**
  * Created by David on 2/1/2015.
  */
-public class Vector2z {
+public class Vector2d {
 
-    private int x;
-    private int y;
+    private double x;
+    private double y;
 
-    public Vector2z (int x, int y) {
+    public Vector2d(double x, double y) {
         setX(x);
         setY(y);
     }
 
-    public void setX (int x) {
+    public void setX (double x) {
         this.x = x;
     }
 
-    public void setY (int y) {
+    public void setY (double y) {
         this.y = y;
     }
 
-    public int getX () {
+    public double getX () {
         return this.x;
     }
 
-    public int getY () {
+    public double getY () {
         return this.y;
     }
 }
