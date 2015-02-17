@@ -5,6 +5,7 @@ import android.graphics.Canvas;
 import android.view.MotionEvent;
 import android.view.View;
 
+import haiherdev.boxingdayblitz.Game;
 import haiherdev.boxingdayblitz.object.GameObject;
 
 import java.util.ArrayList;
@@ -16,8 +17,12 @@ public abstract class AbstractView extends View {
 
     ArrayList<GameObject> list = new ArrayList<GameObject>();
 
-    public AbstractView(Context context) {
+    public Game g;
+
+    public AbstractView(Context context, Game g) {
         super(context);
+        this.g = g;
+
         initList();
     }
 

@@ -3,6 +3,7 @@ package haiherdev.boxingdayblitz.object.button;
 import android.graphics.Canvas;
 import android.view.MotionEvent;
 
+import haiherdev.boxingdayblitz.Game;
 import haiherdev.boxingdayblitz.object.GameObject;
 import haiherdev.boxingdayblitz.object.vector.Vector4d;
 
@@ -14,7 +15,8 @@ public class Button extends GameObject {
     private Vector4d v4d;
     private ButtonFunction buttonFunction;
 
-    public Button (Vector4d v4d, int function) {
+    public Button (Game g, Vector4d v4d, int function) {
+        super (g);
         this.v4d = v4d;
         buttonFunction = new ButtonFunction(function);
     }

@@ -2,6 +2,7 @@ package haiherdev.boxingdayblitz.object.movable;
 
 import java.util.ArrayList;
 
+import haiherdev.boxingdayblitz.Game;
 import haiherdev.boxingdayblitz.object.GameObject;
 import haiherdev.boxingdayblitz.object.vector.Vector2d;
 import haiherdev.boxingdayblitz.object.vector.Vector4d;
@@ -15,6 +16,11 @@ public abstract class Movable extends GameObject {
 
     //contains x, y, width, and height of the player
     private Vector4d v4d;
+
+
+    public Movable (Game g) {
+        super (g);
+    }
 
     public void updateMovements () {
         for (MovementVector m : movements) {

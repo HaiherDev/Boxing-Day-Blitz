@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.view.MotionEvent;
 
+import haiherdev.boxingdayblitz.Game;
 import haiherdev.boxingdayblitz.object.GameObject;
 import haiherdev.boxingdayblitz.object.movable.Movable;
 import haiherdev.boxingdayblitz.object.movable.MovementVector;
@@ -37,7 +38,8 @@ public class Player extends Movable {
      * @param v4d: contains x, y, width and height of character
      *           x and y can be changed in the future
      */
-    public Player (Vector4d v4d, double maxHeight) {
+    public Player (Game g, Vector4d v4d, double maxHeight) {
+        super (g);
         setV4d (v4d);
         MAX_HEIGHT = maxHeight;
     }
