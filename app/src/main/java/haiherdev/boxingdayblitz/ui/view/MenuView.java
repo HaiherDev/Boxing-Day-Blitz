@@ -4,7 +4,7 @@ import android.content.Context;
 
 import haiherdev.boxingdayblitz.object.button.Button;
 import haiherdev.boxingdayblitz.object.button.ButtonFunction;
-import haiherdev.boxingdayblitz.object.vector.Vector4z;
+import haiherdev.boxingdayblitz.object.vector.Vector4d;
 
 /**
  * Created by David on 1/31/2015.
@@ -19,8 +19,8 @@ public class MenuView extends AbstractView {
     }
 
     protected void initList () {
-        list.add(new Button(new Vector4z(100, 100, 200, 100), ButtonFunction.CONTINUE));
-        list.add(new Button(new Vector4z(100, 300, 200, 100), ButtonFunction.EXIT));
+        list.add(new Button(new Vector4d(100, 100, 200, 100), ButtonFunction.CONTINUE));
+        list.add(new Button(new Vector4d(100, 300, 200, 100), ButtonFunction.EXIT));
     }
 
     public void resetView () {

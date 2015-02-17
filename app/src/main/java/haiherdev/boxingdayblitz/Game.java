@@ -5,7 +5,7 @@ import android.graphics.Canvas;
 import android.view.MotionEvent;
 import android.view.SurfaceView;
 
-import haiherdev.boxingdayblitz.object.vector.Vector2z;
+import haiherdev.boxingdayblitz.object.vector.Vector2d;
 import haiherdev.boxingdayblitz.ui.view.AbstractView;
 import haiherdev.boxingdayblitz.ui.view.MenuView;
 
@@ -20,13 +20,13 @@ public class Game extends SurfaceView {
     private AbstractView currentView;
 
     private final Context context;
-    private final Vector2z screenSize;
+    private final Vector2d screenSize;
 
 
     /**
      * constructor
      */
-    public Game (Context context, Vector2z screenSize) {
+    public Game (Context context, Vector2d screenSize) {
         super(context);
         this.context = context;
         this.screenSize = screenSize;
@@ -95,11 +95,11 @@ public class Game extends SurfaceView {
 
     // getters and setters below
 
-    public int getScreenWidth () {
+    public double getScreenWidth () {
         return screenSize.getX();
     }
 
-    public int getScreenHeight () {
+    public double getScreenHeight () {
         return screenSize.getY();
     }
 }

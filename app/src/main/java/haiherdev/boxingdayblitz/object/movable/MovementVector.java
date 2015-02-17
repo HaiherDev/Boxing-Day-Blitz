@@ -35,7 +35,7 @@ public class MovementVector {
         if (getDeltaStartTime() >= END_TIME) {
             destroy ();
         } else {
-
+            moveObject ();
         }
 
         lastTime = System.nanoTime();

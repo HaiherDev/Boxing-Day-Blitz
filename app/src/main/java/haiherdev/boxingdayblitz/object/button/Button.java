@@ -4,18 +4,18 @@ import android.graphics.Canvas;
 import android.view.MotionEvent;
 
 import haiherdev.boxingdayblitz.object.GameObject;
-import haiherdev.boxingdayblitz.object.vector.Vector4z;
+import haiherdev.boxingdayblitz.object.vector.Vector4d;
 
 /**
  * Created by David on 2/1/2015.
  */
 public class Button extends GameObject {
 
-    private Vector4z v4z;
+    private Vector4d v4d;
     private ButtonFunction buttonFunction;
 
-    public Button (Vector4z v4z, int function) {
-        this.v4z = v4z;
+    public Button (Vector4d v4d, int function) {
+        this.v4d = v4d;
         buttonFunction = new ButtonFunction(function);
     }
 
@@ -49,19 +49,19 @@ public class Button extends GameObject {
 
 
 
-    public int getX () {
-        return this.v4z.getX();
+    public double getX () {
+        return this.v4d.getX();
     }
 
-    public int getY () {
-        return this.v4z.getY();
+    public double getY () {
+        return this.v4d.getY();
     }
 
-    public int getWidth () {
-        return this.v4z.getWidth();
+    public double getWidth () {
+        return this.v4d.getWidth();
     }
 
-    public int getHeight () {
-        return this.v4z.getHeight();
+    public double getHeight () {
+        return this.v4d.getHeight();
     }
 }

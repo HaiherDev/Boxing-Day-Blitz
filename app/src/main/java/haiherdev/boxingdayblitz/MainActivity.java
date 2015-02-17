@@ -7,7 +7,7 @@ import android.view.Display;
 import android.view.Window;
 import android.view.WindowManager;
 
-import haiherdev.boxingdayblitz.object.vector.Vector2z;
+import haiherdev.boxingdayblitz.object.vector.Vector2d;
 
 
 public class MainActivity extends Activity {
@@ -30,14 +30,14 @@ public class MainActivity extends Activity {
      * returns a Vector2z that contains the pixel...
      * dimensions of the screen
      */
-    private Vector2z getScreenSize () {
+    private Vector2d getScreenSize () {
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
         int width = size.x;
         int height = size.y;
 
-        return new Vector2z(width, height);
+        return new Vector2d(width, height);
     }
 
 }
