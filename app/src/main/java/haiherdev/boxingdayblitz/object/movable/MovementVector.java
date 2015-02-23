@@ -17,6 +17,12 @@ public class MovementVector {
 
     private Vector2d scale;
 
+    /**
+     * stuff
+     * @param o
+     * @param v2d
+     * @param time
+     */
     public MovementVector (Movable o, Vector2d v2d, long time) {
         this.v2d = v2d;
         this.END_TIME = time;

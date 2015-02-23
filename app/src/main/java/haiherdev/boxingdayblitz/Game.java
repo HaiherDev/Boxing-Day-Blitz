@@ -67,7 +67,7 @@ public class Game extends SurfaceView {
      * needed in the program
      */
     private void initMap () {
-        viewMap.put("menu", new MenuView(context));
+        viewMap.put("menu", new MenuView(context, this));
     }
 
 
