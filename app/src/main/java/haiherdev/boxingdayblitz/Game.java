@@ -6,8 +6,7 @@ import android.view.MotionEvent;
 import android.view.SurfaceView;
 
 import haiherdev.boxingdayblitz.object.vector.Vector2d;
-import haiherdev.boxingdayblitz.ui.view.AbstractView;
-import haiherdev.boxingdayblitz.ui.view.MenuView;
+import haiherdev.boxingdayblitz.ui.view.View;
 
 import java.util.HashMap;
 
@@ -16,8 +15,8 @@ import java.util.HashMap;
  */
 public class Game extends SurfaceView {
 
-    private HashMap<String, AbstractView> viewMap = new HashMap<String, AbstractView>();
-    private AbstractView currentView;
+    private HashMap<String, View> viewMap = new HashMap<String, View>();
+    private View currentView;
 
     private final Context context;
     private final Vector2d screenSize;
@@ -67,14 +66,14 @@ public class Game extends SurfaceView {
      * needed in the program
      */
     private void initMap () {
-        viewMap.put("menu", new MenuView(context, this));
+        viewMap.put("menu", new View(this));
     }
 
 
     /**
      * return a View with a specific name
      */
-    private AbstractView getView (String viewName) {
+    private View getView (String viewName) {
         return viewMap.get(viewName);
     }
 
@@ -83,8 +82,8 @@ public class Game extends SurfaceView {
      * set the currentView to the one specified...
      * after resetting the current view
      */
-    public void setView (AbstractView gameView) {
-        if (currentView != null) currentView.resetView();
+    public void setView (View gameView) {
+        gameView.resetView();
         this.currentView = gameView;
     }
 

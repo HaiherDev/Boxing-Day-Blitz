@@ -1,9 +1,7 @@
 package haiherdev.boxingdayblitz.ui.view;
 
-import android.content.Context;
 import android.graphics.Canvas;
 import android.view.MotionEvent;
-import android.view.View;
 
 import haiherdev.boxingdayblitz.Game;
 import haiherdev.boxingdayblitz.object.GameObject;
@@ -13,21 +11,26 @@ import java.util.ArrayList;
 /**
  * Created by David on 1/31/2015.
  */
-public abstract class AbstractView extends View {
+public class View {
 
     ArrayList<GameObject> list = new ArrayList<GameObject>();
 
     public Game g;
 
-    public AbstractView(Context context, Game g) {
-        super(context);
+    public View(Game g) {
         this.g = g;
+
 
         initList();
     }
 
-    protected abstract void initList();
-    public abstract void resetView ();
+    private void initList () {
+
+    }
+
+    public void resetView () {
+
+    }
 
     public void updateList () {
         for (GameObject o : list) {
