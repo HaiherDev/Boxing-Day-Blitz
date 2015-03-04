@@ -8,7 +8,9 @@ import android.view.SurfaceView;
 import haiherdev.boxingdayblitz.object.vector.Vector2d;
 import haiherdev.boxingdayblitz.ui.view.View;
 
+import java.io.File;
 import java.util.HashMap;
+import java.util.StringTokenizer;
 
 /**
  * Created by David on 2/1/2015.
@@ -66,7 +68,23 @@ public class Game extends SurfaceView {
      * needed in the program
      */
     private void initMap () {
-        viewMap.put("menu", new View(this));
+
+        String filePath = "res/views";
+        File directory = new File (filePath);
+
+        //for all files in the directory "res/views"
+        for (File f : directory.listFiles()) {
+
+            //if f is a file, not a folder
+            if (f.isFile()) {
+                //separate the ".txt" from the rest of the name
+                StringTokenizer st = new StringTokenizer(f.getName(), ".");
+
+                //add a new view to the hashmap with the File f
+                viewMap.put(st.nextToken(), new View(this, f));
+            }
+        }
+
     }
 
 

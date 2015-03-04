@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+
+  <!-- BUTTONS -->
+  <button function="0">
+	<x>100</x>
+	<y>100</y>
+	<width>100</width>
+	<height>80</height>
+  </button>
+  <button function="1">
+  	<x>100</x>
+	<y>200</y>
+	<width>100</width>
+	<height>80</height>
+  </button>
+
+</view>
