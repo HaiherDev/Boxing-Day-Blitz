@@ -13,6 +13,10 @@ public class Vector2d {
         setY(y);
     }
 
+    public double getDisplacement() {
+        return Math.sqrt(Math.pow(getX(), 2) + Math.pow(getY(), 2));
+    }
+
     public void setX (double x) {
         this.x = x;
     }
